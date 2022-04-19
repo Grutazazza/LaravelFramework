@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\MainController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -77,3 +77,4 @@ Route::prefix('admin')->group(function (){
 Route::get('color/{hex}',function ($hex){
     return ($hex);
 })->where(['hex'=>'[0-9A-F]{6}']);
+Route::get('test', [MainController::class,'test']);
