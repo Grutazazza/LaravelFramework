@@ -78,3 +78,20 @@ Route::get('color/{hex}',function ($hex){
     return ($hex);
 })->where(['hex'=>'[0-9A-F]{6}']);
 Route::get('test', [MainController::class,'test']);
+
+
+
+
+Route::get('/blade', function () {
+    return view('second', ['name' => 'Test']);
+});
+Route::get('/news', function () {
+    return view('new', ['name' => 'Test']);
+});
+Route::get('/register', function () {
+    return view('reg', ['name' => 'Test']);
+});
+Route::get('/cabinet', function () {
+    return view('cab', ['name' => 'Test']);
+});
+
