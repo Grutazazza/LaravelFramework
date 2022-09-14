@@ -88,10 +88,21 @@ Route::get('/blade', function () {
 Route::get('/news', function () {
     return view('new', ['name' => 'Test']);
 });
-Route::get('/register', function () {
+Route::get('/123', function () {
     return view('reg', ['name' => 'Test']);
 });
 Route::get('/cabinet', function () {
     return view('cab', ['name' => 'Test']);
 });
+Route::get('/32', function () {
+    return view('reg1', ['name' => 'Test']);
+});
+Route::get('logined', function (){
+    return "aaaa";
+})->name('welcome');
 
+Route::get('/reg1',[\App\Http\Controllers\UserController::class,'login'])->name('login');
+Route::Post('/reg1',[\App\Http\Controllers\UserController::class,'loginPost']);
+
+Route::get('/reg',[\App\Http\Controllers\UserController::class,'register'])->name('register');
+Route::Post('/reg',[\App\Http\Controllers\UserController::class,'registerPost']);
