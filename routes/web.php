@@ -92,8 +92,8 @@ Route::get('/123', function () {
     return view('reg', ['name' => 'Test']);
 });
 Route::get('/cabinet', function () {
-    return view('cab', ['name' => 'Test']);
-});
+    return view('cab');
+})->name('cabinet');
 Route::get('/32', function () {
     return view('reg1', ['name' => 'Test']);
 });
@@ -106,3 +106,7 @@ Route::Post('/reg1',[\App\Http\Controllers\UserController::class,'loginPost']);
 
 Route::get('/reg',[\App\Http\Controllers\UserController::class,'register'])->name('register');
 Route::Post('/reg',[\App\Http\Controllers\UserController::class,'registerPost']);
+
+Route::get('/users', function (){
+    return view('users');
+})->name('users');

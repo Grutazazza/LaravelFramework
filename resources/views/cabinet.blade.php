@@ -99,7 +99,13 @@
                             <a class="nav-link" href="news">News</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="register">Login</a>
+                            <a class="nav-link" href="reg1">Login</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="reg">Register</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="users">Users</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="cabinet">Cabinet</a>

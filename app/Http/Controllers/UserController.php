@@ -20,7 +20,7 @@ class UserController extends Controller
     {
         if(Auth::attempt($request->validated())){
             $request->session()->regenerate();
-            return redirect()->route('welcome');
+            return redirect()->route('cabinet');
         }
         return  back()->with(['errorSuccess'=>'AAAAA']);
     }
@@ -31,7 +31,7 @@ class UserController extends Controller
 
     public function registerPost(RequestValidationRegister $request)
     {
-        echo "AAAAAA";
+        echo "Hehe";
         $data = $request->validated();
         $data['password'] = Hash::make($data['password']);
 
